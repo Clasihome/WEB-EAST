@@ -7,7 +7,7 @@ import heroImg from '../../images/home-hero.png';
 import { Section } from '../../styled-components';
 
 const MainCont = styled(Section)`
-  background-image: linear-gradient(135deg, #7DA0B6, #A3C4D6);
+  
   //background-attachment: fixed;
   background-position: bottom;
   background-size: cover;
@@ -31,6 +31,7 @@ const HeroImg = styled.img`
 
 const Title = styled.h2`
   //width: 50%;
+  
 `
 
 export default ()=> {
@@ -38,18 +39,12 @@ export default ()=> {
   return(
     <MainCont 
       first
-      height="70vh"
-      src={state.about.hero.background}
+      height="18vh"
+  
     >
-      <HeroImg src={heroImg} alt="" />
+     
       <Container>
-        <Row>
-          <Col xs={12} md={6}>
-            <Title>
-              {state.about.hero.title}
-            </Title>
-          </Col>
-        </Row>
+       
       </Container>
     </MainCont>
   )

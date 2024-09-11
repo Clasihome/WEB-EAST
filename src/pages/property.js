@@ -17,7 +17,7 @@ const SectionCustom = styled(Section)`
   font-size: 1.5rem;
 `
 const Title = styled.p`
-  color: ${props => props.theme.primaryColor};
+  color: gray;
   font-size: 1.5rem;
   margin: 2rem 0;
   text-align: center;
@@ -25,7 +25,7 @@ const Title = styled.p`
 
 export default ({ location })=> {
   const params = new URLSearchParams(location.search);
-  const url = `https://api.clasihome.com/rest/properties/?propertyId=${params.get("id")}`;
+  const url = `https://wsnzm.clasihome.com:3443/api/conv/property?propertyId=${params.get("id")}`;
   const [query, setQuery] = useReducer((current, next) => ({ ...current, ...next }),{
     loading: true,
     error: false,
@@ -57,7 +57,7 @@ export default ({ location })=> {
   )
 
   if(query.error) return(
-    <SectionCustom height="100vh" first>
+    <SectionCustom height="110vh" first>
       <span>Error de conexión</span>
     </SectionCustom>
   )
@@ -65,6 +65,9 @@ export default ({ location })=> {
   return(
     <Context.Provider value={query.data}>
       <Fragment>
+     <br></br>
+     <br></br>
+     <br></br>
         <Hero />
         <Container>
           <Row>
@@ -74,12 +77,12 @@ export default ({ location })=> {
             <Col xs={12} md={5}>
               <Contact />
             </Col>            
-            <Col xs={12}>
+            {/*<Col xs={12}>
               <Title>Propiedades que podrían interesarte</Title>
               <FeaturedProperties />
               <br />
               <br />
-            </Col>
+            </Col>*/}
           </Row>
         </Container>
       </Fragment>

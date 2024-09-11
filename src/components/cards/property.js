@@ -23,7 +23,8 @@ const AniLinkCustom = styled(AniLink)`
 const Card = styled.div`
   width: 95%;
   border: 1px solid rgba(0, 0, 0, .1);
-  min-height: 496.09px;
+  min-height: autp;
+  max-height: auto;
   position: relative;
   @media(min-width: 768px){
     width: 100%;
@@ -42,15 +43,16 @@ const InfoCont = styled.div`
 `
 const TitleCont = styled.div`
   padding-top: 1rem;
-  font-size: .8rem;
+  font-size: .6rem;
 `
-const Title = styled.p`
+const Title = styled.h6`
   margin: 0;
   min-height: 50px;
+  text-transform: uppercase;
 `
-const Price = styled.p`
+const Price = styled.h5`
   margin: 0;
-  color: ${props => props.theme.primaryColor};
+  color: gray;
 `
 const Code = styled.p`
   margin: 0;
@@ -108,6 +110,7 @@ export default ({
   mainImage,
   title,
   value,
+  valueUf,
   currency,
   code,
   ubication,
@@ -138,10 +141,10 @@ export default ({
             {getCategoryByCode(title)} {title.replace(/\d+/, '').trim()}
               
             </Title>
-           
+           <br></br>
             <Price>
               {
-                `${currency} ${currency === "UF" ? value : priceFormat(value)}`
+               <span>{currency !== "UF" && <span>UF {valueUf}</span>}</span>
               }
             </Price>
             <Code>

@@ -31,10 +31,13 @@ const InfoCont = styled.div`
     padding: 2rem 15px;
   }
 `
-const Title = styled.h2`
+const Title = styled.h3`
+text-align: justify;
+
 
 `
 const SubTitle = styled.p`
+text-align: justify;
 
 `
 const Image = styled.img`

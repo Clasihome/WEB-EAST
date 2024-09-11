@@ -3,10 +3,10 @@ import context from '../context';
 import styled from 'styled-components';
 
 const Logo = styled.img`
-  //min-width: 180px;
-  min-height: 81.38px;
-  max-width: 180px;
-  max-height: 81.38px;
+  //min-width: 200px;
+  min-height: 100px;
+  max-width:200px;
+  max-height:100px;
   object-fit: contain;
   object-position: center;
 `

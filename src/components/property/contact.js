@@ -19,7 +19,7 @@ const SectionCustom = styled(Section)`
   //box-shadow: 0px 1px 1px rgba(0, 0, 0, .12), 0px 2px 2px rgba(0, 0, 0, .12), 0px 4px 4px rgba(0, 0, 0, .12), 0px 8px 8px rgba(0, 0, 0, .12), 0px 16px 16px rgba(0, 0, 0, .12);
 `
 const Title = styled.p`
-  color: ${props => props.theme.primaryColor};
+  color: gray;
   font-size: 1.5rem;
 `
 const UserCont = styled.div`
@@ -68,7 +68,11 @@ const UserInfoCont = styled.ul`
 const UserInfoItem = styled.li`
   
 `
-
+const Imagenlogo = styled.img`
+  // Puedes agregar aquí tus estilos personalizados
+  width: 100px;
+  height: auto;
+`;
 const Form = styled.form`
 
 `
@@ -161,18 +165,10 @@ export default ()=> {
       <div>
       <Title>Contacto</Title>
       <UserCont>
-      {
-          user.avatar?(
-            <Avatar src={user.avatar} alt={user.lastName} />
-          )
-          :(
-            <NoAvatar>
-              <span>{user.firstName.charAt(0).toUpperCase()}</span>
-              <span>{user.lastName.charAt(0).toUpperCase()}</span>
-            </NoAvatar>
-          )
-        }
-        <UserInfoCont>
+      <div>
+      <Imagenlogo src="https://www.eastproperties.cl/static/ez-hero-desktop-5cf61fbeb917c30ffce18b0c15c91c21.png" alt="Logo" />
+    </div>
+               <UserInfoCont>
           <UserInfoItem>
             {user.firstName + " " + user.lastName }
             {user.position ? " - " + user.position : ""}

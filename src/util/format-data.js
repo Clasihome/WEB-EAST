@@ -4,20 +4,20 @@ export default (data) => {
       builderId: data._id ? data._id : "5fb2a5f3ea262c2e14e462ad",
       typeId: data.user ? "user" : "office",
       officeId: data.user ? data.user : data.office,
-      primaryColor: data.primaryColor ? data.primaryColor : "#5E90F2",
-      address: data.address ? data.address : "chile, santiago. Av 1 calle 2 local 1a",
-      email: data.email ? data.email : "contacto@clasihome.com",
+      primaryColor: data.primaryColor ? data.primaryColor : "#f2d40d",
+      address: data.address ? data.address : "Lo Barnechea",
+      email: data.email ? data.email : "hola@eastproperties.es",
       facebook: data.facebook ? data.facebook : "https://facebook.com",
       twitter: data.twitter ? data.twitter : "https://twitter.com",
-      instagram: data.instagram ? data.instagram : "https://instagram.com",
+      instagram: data.instagram ? data.instagram : "https://www.instagram.com/eastproperties/",
       favicon: data.favicon ? data.favicon : require("../images/icon.png"),      
       lat: data.lat ? data.lat : "-33.410167",
       lng: data.lng ? data.lng : "-70.655265",
       logo: data.logo ? data.logo : require("../images/logo.png"),
       logoDark: data.logoDark ? data.logoDark : require("../images/logo-dark.png"),
-      movil: data.movil ? data.movil : "+56 9 1234 1234",
-      phone: data.phone ? data.phone : "+56 2 1234 1234",
-      footerText: data.footerText ? data.footerText : "Somos una empresa con mas de 20 años en el rubro del corretaje inmobiliario",
+      movil: data.movil ? data.movil : "+56 9 2630 7841",
+      phone: data.phone ? data.phone : "+56 9 2630 7841",
+      footerText: data.footerText ? data.footerText : "Corredora de Propiedades Boutique en Santiago Oriente",
       home:{
         hero: {
           background: data.home && data.home.hero && data.home.hero.background ? data.home.hero.background : require("../images/template-home-hero-background.jpg"),
@@ -32,8 +32,8 @@ export default (data) => {
         about: {
           banner: {
             image: data.home && data.home.about && data.home.about.banner && data.home.about.banner.image ? data.home.about.banner.image : require("../images/template-home-about-hero-background.jpg"),
-            title: data.home && data.home.about && data.home.about.banner && data.home.about.banner.title ? data.home.about.banner.title : "Somos una empresa con mas de 20 años en el rubro del corretaje inmobiliario",
-            subTitle: data.home && data.home.about && data.home.about.banner && data.home.about.banner.subTitle ? data.home.about.banner.subTitle : "Esto nos permite entender mejor que nadie las necesidades de nuestros clientes, por eso ponemos el foco en que la experienca de compra o arriendo sea única",
+            title: data.home && data.home.about && data.home.about.banner && data.home.about.banner.title ? data.home.about.banner.title : "Corredora de Propiedades Boutique en Santiago Oriente ",
+            subTitle: data.home && data.home.about && data.home.about.banner && data.home.about.banner.subTitle ? data.home.about.banner.subTitle : "Brindamos a nuestros clientes un servicio exclusivo. Acompañandoles de forma muy personalizada en todo el proceso compra, venta y arriendo.Desde el momento de la selección hasta el día de la entrega de llaves.",
             buttonText: data.home && data.home.about && data.home.about.banner && data.home.about.banner.buttonText ? data.home.about.banner.buttonText : "Conózcanos"
           }
         },  
@@ -41,15 +41,15 @@ export default (data) => {
           items: data.home && data.home.services && data.home.services.items.length ? data.home.services.items : [
             {
               title: "Compras",
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium fringilla ex at hendrerit"
+              description: ""
             },
             {
               title: "Arriendo",
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium fringilla ex at hendrerit"
+              description: ""
             },
             {
               title: "Compras",
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium fringilla ex at hendrerit"
+              description: ""
             }
           ]
         },  
@@ -80,23 +80,20 @@ export default (data) => {
         },
         history: {
           background: data.about && data.about.history && data.about.history.background ? data.about.history.background : require("../images/template-about-history-background.jpg"),
-          description: data.about && data.about.history && data.about.history.description ? data.about.history.description : "<p>Somos clasihome, una empresa con varios años de trayectoria en el dinámico mercado inmobiliario, reconocidos por un servicio altamente personalizado y eficiente.</p><p>Nuestra gran fortaleza es el profundo conocimiento comercial inmobiliario que nos permite agregar valor a todos los proyectos que emprendemos y servicios que entregamos.<p/>",
+          description: data.about && data.about.history && data.about.history.description ? data.about.history.description : "<p>Corredora Boutique de propiedades especializada en el sector oriente de la capital: Lo Barnechea, Vitacura y las Condes. Ofrecemos también servicios de relocation para clientes internacionales .<p/>",
           title: data.about && data.about.history && data.about.history.title ? data.about.history.title : "Nuestra Historia"
         },
         description: {
           items: data.about && data.about.description && data.about.description.items.length ? data.about.description.items : [
             {
               title: "Misión",
-              description: "En el ámbito de todo negocio inmobiliario, que nuestros clientes nos reconozcan como la mejor opción para exigir el máximo provecho a sus recursos inmobiliario."
+              description: "Nos enfocamos en captar y ofrecer viviendas que se revalorizan en el tiempo, satisfaciendo así las necesidades de nuestros clientes nacionales e internacionales."
             },
             {
               title: "Visión",
-              description: "En el ámbito de todo negocio inmobiliario, que nuestros clientes nos reconozcan como la mejor opción para exigir el máximo provecho a sus recursos inmobiliario."
-            },
-            {
-              title: "Valores",
-              description: "En el ámbito de todo negocio inmobiliario, que nuestros clientes nos reconozcan como la mejor opción para exigir el máximo provecho a sus recursos inmobiliario."
+              description: "Brindamos a nuestros clientes un servicio exclusivo. Acompañandoles de forma muy personalizada en todo el proceso compra, venta y arriendo.Desde el momento de la selección hasta el día de la entrega de llaves."
             }
+         
           ]
         },
         stats: {
@@ -110,33 +107,13 @@ export default (data) => {
           items: data.about && data.about.team && data.about.team.items.length ? data.about.team.items : [
             {
               avatar: require("../images/template-team-member-1.jpg"),
-              cv: "Ingeniero Comercial, Master en Finanzas. Inversor inmobiliario, con 6 años de experiencia en Banca, Mesa de Dinero. 6 años en el corretaje de propiedades, especializado en el manejo de cartera de propiedades. ",
-              email: "usuario1@example.com",
-              fullName: "Usuario 1",
+              cv1: "Abogada de formación, y banquera de profesión. Nací en Madrid, pero Santiago de Chile es mi hogar desde hace años. ¡Tanto es así que mis hijos son chilenos! ",
+              cv2:"Después de una larga trayectoria profesional desempeñada en distintas entidades bancarias, tanto en España como en Chile, decido crear East Properties para dedicarme a una de mis pasiones, el mundo del real estate. Las casas y los lugares me inspiran, y procuro transmitir esa inspiración a la hora de mostrar una propiedad a mis clientes.",
+              cv3:"Otra de mis pasiones es ayudar a las personas a establecerse de forma exitosa en nuevos países, para ello cuento con el bagaje de mi propia experiencia como expatriada, donde la ayuda una empresa profesional y con experiencia es clave para que el proceso de reubicación sea un éxito",
+              email: "Broker & Founder",
+              fullName: "Maria de Gracia Ouaglou Barrera ",
               phone: "+56 9 5555 5555"
-            },
-            {
-              avatar: require("../images/template-team-member-2.jpg"),
-              cv: "Ingeniero Comercial, Master en Finanzas. Inversor inmobiliario, con 6 años de experiencia en Banca.",
-              email: "usuario2@example.com",
-              fullName: "Usuario 2",
-              phone: "+56 9 5555 5555"
-            },
-            {
-              avatar: require("../images/template-team-member-3.jpg"),
-              cv: "Ingeniero Comercial, Master en Finanzas. Inversor inmobiliario, con 6 años de experiencia en Banca, Mesa de Dinero. 6 años en el corretaje de propiedades, especializado en el manejo de cartera de propiedades. ",
-              email: "usuario3@example.com",
-              fullName: "Usuario 3",
-              phone: "+56 9 5555 5555"
-            },
-            {
-              //avatar: require("../images/template-team-member-4.jpg"),
-              avatar: "",
-              cv: "Ingeniero Comercial, Master en Finanzas. Inversor inmobiliario, con 6 años de experiencia en Banca, Mesa de Dinero. 6 años en el corretaje de propiedades, especializado en el manejo de cartera de propiedades. ",
-              email: "usuario4@example.com",
-              fullName: "Usuario 4",
-              phone: "+56 9 5555 5555"
-            }                          
+            }                         
           ]
         },
         ubication: {
@@ -145,7 +122,7 @@ export default (data) => {
       },
       contact: {
         map: {
-          title: data.contact && data.contact.map && data.contact.map.title ? data.contact.map.title : "Encuéntranos en Sucursal Chicureo Camino a Chicureo 2 km. esquina Los Ingleses Colina - Santiago",
+          title: data.contact && data.contact.map && data.contact.map.title ? data.contact.map.title : "Encuéntranos en Santiago",
           subTitle: data.contact && data.contact.map && data.contact.map.subTitle ? data.contact.map.subTitle : "234"
         },
         title: data.contact && data.contact.title ? data.contact.title : "¿Dudas? ¿Consultas? Estamos aquí para ayudarlo.",

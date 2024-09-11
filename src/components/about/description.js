@@ -13,6 +13,7 @@ const InfoCont = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: justify;
   height: 100%;
   max-width: 540px;
   padding-right: 15px;

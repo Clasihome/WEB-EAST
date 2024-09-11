@@ -12,7 +12,7 @@ const Form = styled.form`
     padding: 0 4rem;
   }
 `
-const Title = styled.h3`
+const Title = styled.h5`
   padding: 2rem 0;
   @media(min-width: 768px){
     padding: 0;
@@ -97,7 +97,7 @@ export default ()=> {
   return(
         <Form onSubmit={onSubmit}>
           <Title>
-            Vende con nosotros!
+            ¡Contactanos!
           </Title>
           <Row>
             <Col xs={12}>

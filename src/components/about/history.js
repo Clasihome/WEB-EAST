@@ -22,13 +22,15 @@ const InfoCont = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: justify;
 `
-const Title = styled.h2`
+const Title = styled.h4`
   //width: 50%;
-  color: ${props => props.theme.primaryColor};
+  color: gray;
   margin: 2rem 0;
 `
-const Description = styled.div`
+const Description = styled.p`
+zoom: 100%;
 
 `
 
@@ -38,10 +40,10 @@ export default ()=> {
     <SectionCustom>
       <Container>
         <Row>
-          <Col xs={12} md={{ span: 7, order: 2 }}>
+          {/*<Col xs={12} md={{ span: 7, order: 2 }}>
             <Image alt="historia" src={state.about.history.background} />
-          </Col>
-          <Col xs={12} md={{ span: 5, order: 1 }}>
+          </Col>*/}
+          <Col xs={12} >
             <InfoCont>
             <Title>
               {state.about.history.title}

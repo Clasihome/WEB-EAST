@@ -145,7 +145,7 @@ export default ({ children, location }) => {
 
   const getFeatured = async(email, id, typeId, maxProperties)=> {
     try{
-      const data = await fetch(`https://wsnzm.clasihome.com:3443/api/conv/properties?email=${email}paolamunoz@nexxos.cl&id=${id}&typeId=${typeId}&status=PUBLICADA&limit=${maxProperties}`);
+      const data = await fetch(`https://wsnzm.clasihome.com:3443/api/conv/properties?email=gracia@eastproperties.cl&id=${id}&typeId=${typeId}&status=PUBLICADA&limit=${maxProperties}`);
       //const data = await fetch(`https://api.clasihome.com/rest/properties?id=${id}&typeId=${typeId}&status=PUBLICADA&limit=${maxProperties}`);
       const result = await data.json();
       return result;
@@ -229,17 +229,18 @@ export default ({ children, location }) => {
               name='keywords'
               content='clasihome, clasipro, clasihome propiedades chile, tecnología chile, software'
             />
-            <title>Clasihome - Software Inmobilario de Chile</title>
-            <link rel='canonical' href='https://www.saengerpropiedades.cl/' />
-            <meta property='og:url' content='https://clasihome.com/' />
-            <meta property='og:title' content='Saenger Propiedades' />
+            <title>EAST Properties - inmobiliaria</title>
+            <link rel='canonical' href='https://eastproperties.cl/' />
+            <meta property='og:url' content='https://eastproperties.cl/' />
+            <meta property='og:title' content='EAST Properties' />
             <meta
               property='og:description'
-              content='Ayudamos a personas y hogares a encontrarse'
+              content='Te ayudamos a conectar con la propiedad perfecta para tí.
+'
             />
             <meta
               property='og:image'
-              content='https://www.saengerpropiedades.cl/logo.png'
+              content='https://eastproperties.cl/static/logo-5f4e8b1970cba23e600220d0c431f0c2.png'
             />
             <meta name='og:type' content='website' />
             <meta name='theme-color' content={data.data.primaryColor} />

@@ -12,7 +12,7 @@ import heroImg from '../../images/ez-hero-desktop.png';
 import Link from '../link';
 
 const MainCont = styled(Section)`
-  background-image: linear-gradient(135deg, #7DA0B6, #A3C4D6);
+  background-image: url("${require("../../images/casa.jpg")}");
   background-attachment: fixed;
   background-position: top;
   background-size: cover;
@@ -26,22 +26,29 @@ const MainCont = styled(Section)`
 
 const HeroImg = styled.img`
   position: absolute;
-  bottom: 0px;
+  bottom: 40px;
   right: 0;
   z-index: 0;
-  max-width: 50%;
-  @media(min-width: 768px){
+  max-width: 35%;
+  @media(min-width: 468px){
     
   }
 `
 const InfoCont = styled.div`
   position: relative;
+  background-color: rgba(255, 255, 255, 0.5);  
+  border-radius: 6px;
+  padding-bottom: .3rem; /* Ajuste para más espacio en la parte inferior */
   z-index: 1;
+  
   @media(min-width: 768px){
-    max-width: 45%;
+    max-width: 70%;
   }
-`
+`;
 const Title = styled.h1`
+color:black;
+margin-left:1rem;
+
   
 `
 const RateBarCont = styled.div`
@@ -108,7 +115,25 @@ const DownLink = styled.a`
     filter: brightness(1.1);
   }
 `
-   
+
+const Video = styled.video`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+`
+const VideoOverLay = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;  
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .2));
+  //z-index: 100;
+`
 const Divider = styled.div`
   height: 91px;
   width: 100%;
@@ -134,6 +159,12 @@ const Divider = styled.div`
 }
    
 `
+const Parrafo = styled.p`
+margin-left:1rem;
+
+color: black;
+
+`
 
 export default ()=> {
   const state = useContext(context);
@@ -154,21 +185,28 @@ export default ()=> {
   return(
     <MainCont 
       src={state.home.hero.background} first height="100vh"
+      
     >
-      <HeroImg src={heroImg} alt="" />
+        {/*<Video
+          src={require('../../videos/living.mp4')}
+          autoPlay
+          loop
+          muted
+          playsinline
+          poster={require('../../videos/living.webp')}
+        />         
+        <VideoOverLay /> */}
+
       <RateBarCont>
         <RateBar />
       </RateBarCont>
       <Container>
         <InfoCont>
           <Title id="title">
-            Promovemos una gestión de propiedades simple y segura.
-          </Title>
-          <p id="search">
-          Procesos más sencillos, con información relevante
-en el tiempo correcto, nos permite generar vínculos
-de confianza con nuestros clientes.
-          </p>
+          Te ayudamos a conectar con la propiedad perfecta para tí.          </Title>
+          <Parrafo id="search">
+          Corredora de Propiedades Boutique en Santiago Oriente 
+          </Parrafo>
           <Link to="about">
             <Button id="formSearch" primary>Saber más</Button>
           </Link>

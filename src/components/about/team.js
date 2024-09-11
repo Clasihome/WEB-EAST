@@ -7,7 +7,7 @@ import { v1 as uuid } from 'uuid';
 import { Section } from '../../styled-components';
 
 const Title = styled.h2`
-  color: ${props => props.theme.primaryColor};
+  color: gray;
   text-align: center;
   margin-bottom: 4rem;
 `
@@ -24,11 +24,12 @@ const Card = styled.div`
   }
 `
 const Avatar = styled.img`
-  width: 160px;
-  height: 160px;
+  width: 260px;
+  height: 260px;
   object-fit: cover;
   object-position: center;
   margin-bottom: 2rem;
+  border-radius: 50%;
 `
 const NoAvatar = styled.div`
   width: 160px;
@@ -47,15 +48,17 @@ const NoAvatar = styled.div`
 `
 const Info = styled.p`
   margin: 0;
-  color: ${props => props.theme.primaryColor};
+  color: gray;
   font-weight: bold;
+  font-size: 1.5rem;
 `
 const Resume = styled.p`
-  margin: 2rem 0;
-  text-align: center;
   flex: 1;
-`
-const User = ({ avatar, cv, email, fullName, phone }) => (
+  width: 90%;
+  text-align: justify;
+  font-style: italic;
+`;
+const User = ({ avatar, cv1, cv2, cv3, email, fullName, phone }) => (
   <Card>
     {
       avatar
@@ -63,11 +66,19 @@ const User = ({ avatar, cv, email, fullName, phone }) => (
       :<NoAvatar>{fullName}<span>Sin avatar</span></NoAvatar>
     }
     <Info>{fullName}</Info>
-    <Resume>
-      {cv}
-    </Resume>
     <Info>{email}</Info>
-    <Info>{phone}</Info>
+    <br></br>
+    <Resume>
+      {cv1}
+    </Resume>
+    <Resume>
+      {cv2}
+    </Resume>
+    <Resume>
+      {cv3}
+    </Resume>
+    
+   
   </Card>
 )
 
@@ -84,7 +95,7 @@ export default ()=> {
           </Col>
           {
             state.about.team.items.map(item => (
-              <Col key={uuid()} xs={12} md={4} lg={3}>
+              <Col key={uuid()} xs={12} >
                 <User {...item} />
               </Col>
             ))

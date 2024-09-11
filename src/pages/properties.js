@@ -9,9 +9,10 @@ export default ()=> {
 
   return(
     <Fragment>
+         <Hero />   
       <Properties />
-      <Hero />      
-      <Reviews />
+      
+     {/*<Reviews />*/}
       <Contact />
     </Fragment>
   )

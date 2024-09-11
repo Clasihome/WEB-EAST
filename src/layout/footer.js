@@ -199,20 +199,14 @@ export default ()=> {
                     </NavLink>
                   </AniLink>                                    
                 </NavItem>
-                <NavItem>
-                  <AniLink href={`http://app.clasihome.com/login?logo=${state.logo}&primaryColor=${state.primaryColor.substring(1)}`} target="_blank" rel="noopener" duration={.5}>
-                    <NavLink >
-                      Login
-                    </NavLink>
-                  </AniLink>            
-                </NavItem>    
+               
               </NavList>            
               <FooterText>
                 {state.footerText}
               </FooterText>
             </NavCont>
           </Col>                          
-          <Col xs={{ span: 6, order: 12 }} md={12} lg={3}>
+          {/*<Col xs={{ span: 6, order: 12 }} md={12} lg={3}>
             <NavCont className="align-items-end">
               <BackTop onClick={()=> window.scrollTo(0, 0)} href="#top">
                 <UpOutlined />
@@ -230,7 +224,7 @@ export default ()=> {
                 </SocialLink>                                    
               </SocialCont>                  
             </NavCont>
-          </Col>
+          </Col>*/}
         </Row>
         </ContainerCustom>
       <CopyrightCont>
@@ -238,7 +232,7 @@ export default ()=> {
           <CopyrightInnerCont>
             <span>{new Date().getFullYear()} © Todos los derechos reservados</span>
             <div>
-              Desarrollado por <DevelopedBy href="https://clasihome.com" rel="noopener" target="_blank">Clasihome</DevelopedBy>
+              Desarrollado por <DevelopedBy href="https://nexxoschile.cl" rel="noopener" target="_blank">Nexxos Chile</DevelopedBy>
             </div>
           </CopyrightInnerCont>
         </ContainerCustom>

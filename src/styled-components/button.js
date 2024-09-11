@@ -5,31 +5,37 @@ export default styled.button`
     min-height: 44px;
     padding: 1px 6px;
     display: flex;
+    margin-left: .6rem;
+    margin-right: 2rem;
     justify-content: center;
     align-items: center;
     border-width: 1px;
     border-style: solid;
-    border-color: ${props => props.primary ? props.theme.primaryColor : "#fff"};
-    background-color: ${props => props.outlined ? "transparent" : props.theme.primaryColor};    
-    color: ${props => props.outlined && props.primary ? props.theme.primaryColor : "#fff"};
+    border-color: gray;
+    background-color: rgba(0, 0, 0, 0.4);  
+    color: ${props => props.outlined && props.primary ? props.theme.primaryColor : "white"};
     border-radius: 6px;
     transition: 250ms ease;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem; /* Ajuste aquí */
+    margin-top: ; /* Mover hacia arriba */
     cursor: pointer;
-    &:hover{
+    
+    &:hover {
       background-color: ${props => props.outlined && props.primary ? props.theme.primaryColor : props.primary ? props.theme.primaryColor: "#fff"};
       color: ${props => props.outlined && props.primary ? "#fff" : props.primary ? "#fff" : props.theme.primaryColor};
       filter: brightness(1.1);
     }
-    &:disabled      {
+    
+    &:disabled {
       background-color: ${props => props.outlined && props.primary ? props.theme.primaryColor : props.primary ? props.theme.primaryColor: "#fff"};
       color: ${props => props.outlined && props.primary ? "#fff" : props.primary ? "#fff" : props.theme.primaryColor};
       filter: brightness(1.1);
       cursor: progress;
-    }    
+    }
+    
     @media(min-width: 768px){
       margin-bottom: 0;
       border-top-left-radius: ${props => props.icon ? "0" : "6px"};
       border-bottom-left-radius: ${props => props.icon ? "0" : "6px"};
     }
-`
+`;

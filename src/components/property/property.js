@@ -39,7 +39,7 @@ const MoreButton = styled.button`
   justify-content: flex-end;
   align-items: center;
   transition: 250ms ease;
-  color: ${props => props.theme.primaryColor};
+  color: gray;
   height: 2rem;
   padding-right: 1rem;
   font-size: .8rem;
@@ -48,7 +48,7 @@ const MoreButton = styled.button`
   }
 `
 const Title = styled.p`
-  color: ${props => props.theme.primaryColor};
+  color: gray;
   font-size: 1.5rem;
 `
 const CharItem = styled.p`
@@ -138,8 +138,8 @@ export default ()=> {
               Ubicación   
             </MapTitle>
               <Map
-              lat={parseFloat(state.ubication.location.coordinates[1])}
-              lng={parseFloat(state.ubication.location.coordinates[0])}
+              lat={parseFloat(state.ubication.location.coordinates[0])}
+              lng={parseFloat(state.ubication.location.coordinates[1])}
               height={300}
               zoom={18}
             />      

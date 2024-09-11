@@ -10,12 +10,14 @@ import { ClasiQuote } from '../../icons';
 import sale from '../../images/sale.png';
 import buy from '../../images/buy.png';
 import leasing from '../../images/leasing.png';
+import relocation from '../../images/relocation.png';
 
 const Title = styled.h2`
   margin-bottom: 1rem;
   color: #fff;
   position: relative;
   z-index: 1;
+  
   @media(min-width: 768px){
     width: 50%;
     margin: 0 auto;
@@ -45,6 +47,7 @@ const Services = styled.div`
 const Reviews = styled.div`
   height: 100%;
   display: flex;
+  text-align: justify;
   flex-direction: column;
   justify-content: space-between;
   @media(min-width: 768px){
@@ -93,7 +96,7 @@ const ServiceIcon = styled.img`
   width: 80px;
 `
 const ServiceTitle = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   margin: .5rem auto;
 `
@@ -118,45 +121,52 @@ export default ()=>{
         <VideoOverLay /> 
         <Container>
           <Title>Ofrecemos un servicio ajustado a las necesidades de cada cliente</Title>  
-          <SubTitle>Estas son algunas de las cosas que podemos hacer por vos:</SubTitle>                   
+          <SubTitle>Estas son algunas de las cosas que podemos hacer por ti:</SubTitle>                   
           <Row>
-            <Col xs={12} md={4}>
+            <Col xs={12} md={3}>
               <ServiceItem>
                 <ServiceIcon src={buy} alt="compra de inmuebles" />
                 <ServiceTitle>
                   Compra
                 </ServiceTitle>
                 <ServiceInfo>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium fringilla ex at hendrerit
                 </ServiceInfo>
               </ServiceItem>              
             </Col>
-            <Col xs={12} md={4}>
+            <Col xs={12} md={3}>
               <ServiceItem>
                 <ServiceIcon src={sale} alt="compra de inmuebles" />
                 <ServiceTitle>
                   Venta
                 </ServiceTitle>
                 <ServiceInfo>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium fringilla ex at hendrerit
                 </ServiceInfo>
               </ServiceItem>              
             </Col>
-            <Col xs={12} md={4}>
+            <Col xs={12} md={3}>
               <ServiceItem>
                 <ServiceIcon src={leasing} alt="compra de inmuebles" />
                 <ServiceTitle>
                   Arriendo
                 </ServiceTitle>
                 <ServiceInfo>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium fringilla ex at hendrerit
                 </ServiceInfo>
               </ServiceItem>              
-            </Col>                                
+            </Col>
+            <Col xs={12} md={3}>
+              <ServiceItem>
+                <ServiceIcon src={relocation} alt="compra de inmuebles" />
+                <ServiceTitle>
+                  Relocation
+                </ServiceTitle>
+                <ServiceInfo>
+                </ServiceInfo>
+              </ServiceItem>              
+            </Col>                                     
           </Row>    
         </Container>     
       </ServiceCont>        
-      <Container>
+      {/*<Container>
         <Row>
           <Col xs={12}>
             <Reviews>
@@ -167,7 +177,7 @@ export default ()=>{
             </Reviews>
           </Col>       
         </Row>
-      </Container>
+      </Container>*/}
     </Section>
   )
 }

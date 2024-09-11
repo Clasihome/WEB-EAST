@@ -8,8 +8,8 @@ const SectionCustom = styled(Section)`
   
 `
 
-const Title = styled.h2`
-  color: ${porps => porps.theme.primaryColor};
+const Title = styled.h4`
+  color: black;
 `
 
 const Subtitle = styled.p`
@@ -17,6 +17,7 @@ const Subtitle = styled.p`
 `
 
 const Paragrahp = styled.p`
+text-align: justify;
   
 `
 
@@ -81,31 +82,29 @@ export default () => {
     <SectionCustom>
       <Container>
         <Title>
-          Vende con EZ PROPIEDADES
+         REAL STATE
         </Title>
-        <Subtitle>
-          Nosotros colocamos tu propiedad frente a mas compradores potenciales que nadie.
-        </Subtitle>
+        <br></br>
+   
         <Row>
           <Col xs={12} md={6}>
             <WhyTitle>
-              <span>Porque</span> EZ PROPIEDADES
+        
             </WhyTitle>
             <Paragrahp>
-              Cuando trabajas con uno de nuestros agentes, estás trabajando con alguien que combina la experiencia del mercado con la innovación empresarial. Escucharemos sus necesidades y objetivos, usaremos datos y creatividad para optimizar su propiedad para compradores potenciales y estaremos a su lado en cada paso del proceso de venta.
+            Nuestro compromiso es proporcionar a nuestros clientes un servicio personalizado y exclusivo, convirtiéndonos en su asesor inmobiliario de confianza.
+
             </Paragrahp>
             <Paragrahp>
-              Con EZ PROPIEDADES, ponemos su propiedad frente a más compradores potenciales que nadie. Damos la bienvenida a las expectativas porque nos mantenemos en el más alto nivel. Sabemos que la confianza se gana a través de la entrega de resultados y que nuestro éxito lo define el suyo.
+            Nuestros servicios están diseñados para brindarle una experiencia inmobiliaria sin complicaciones, abarcando desde la valoración inicial de su propiedad hasta la gestión completa del proceso de compra, venta o alquiler.
             </Paragrahp>
-            <Paragrahp>
-              Si está considerando vender su casa, o simplemente quiere tener una idea de lo que obtendría su casa en el mercado, nos encantaría conocerlo.
-            </Paragrahp>
+           
           </Col>
           <Col xs={12} md={6}>
             <Contact />
           </Col>          
         </Row>
-        <SellerGuideCont>
+        {/*<SellerGuideCont>
           <Title>
             Descarga nuestra guia del vendedor
           </Title>
@@ -138,7 +137,7 @@ export default () => {
               EZ PROPIEDADES pasó de ser el equipo de ventas número uno en el mercado más difícil del mundo a una firma de corretaje de servicio completo que está revolucionando el modelo inmobiliario tradicional.
             </DescriptionParagraph>
           </DescriptionItem>                    
-        </DescriptionList>
+        </DescriptionList>*/}
       </Container>
     </SectionCustom>
   )

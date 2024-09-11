@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import HamburgerMenu from 'react-hamburger-menu';
 import { Container } from 'react-bootstrap';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import { FacebookOutlined, InstagramOutlined, TwitterOutlined } from '@ant-design/icons';
+import { WhatsAppOutlined, InstagramFilled, MailOutlined } from '@ant-design/icons';
 
 import Logo from './logo';
 import RateBar from './ratebar';
@@ -77,6 +77,13 @@ export default ()=> {
     <NavPanel visible={open}>
       <RateBar />
       <NavList>
+      <NavItem>
+          <AniLink paintDrip hex={state.primaryColor} to="/" onClick={()=> setOpen(false)} duration={.5}>
+            <NavLink dark>
+              Inicio
+            </NavLink>
+          </AniLink>
+        </NavItem>
         <NavItem>
           <AniLink paintDrip hex={state.primaryColor} to="/properties" onClick={()=> setOpen(false)} duration={.5}>
             <NavLink dark>
@@ -87,51 +94,44 @@ export default ()=> {
         <NavItem>
           <AniLink paintDrip hex={state.primaryColor} to="/sales" onClick={()=> setOpen(false)} duration={.5}>
             <NavLink dark>
-              Venta
+              Real State
             </NavLink>
           </AniLink>
         </NavItem>
-        {/* <NavItem>
-          <AniLink paintDrip hex={state.primaryColor} to="/properties/?status=PUBLICADA,ARRENDADA,VENDIDA&limit=12&typeId=office&id=5e8e36b31c9d440000d35090&propertyType=&operation=ARRIENDO&commune=&stringSearch=&priceMin=&priceMax=&totalAreaFrom=&totalAreaTo=&bedrooms=&bathrooms=&currency=CLP" onClick={()=> setOpen(false)} duration={.5}>
+        <NavItem>
+          <AniLink paintDrip hex={state.primaryColor} to="/relocation" onClick={()=> setOpen(false)} duration={.5}>
             <NavLink dark>
-              Arriendo
+              Relocation
             </NavLink>
           </AniLink>
-        </NavItem>                 */}
+        </NavItem>
         <NavItem>
           <AniLink paintDrip hex={state.primaryColor} to="/about" onClick={()=> setOpen(false)} duration={.5}>
             <NavLink dark>
               Nosotros
             </NavLink>
           </AniLink>
-        </NavItem>
-        <NavItem>
-          <AniLink paintDrip hex={state.primaryColor} to="/contact" onClick={()=> setOpen(false)} duration={.5}>
-            <NavLink dark>
-              Contacto
-            </NavLink>
-          </AniLink>
         </NavItem>                
       </NavList>
       <NavList horizontal>
         <NavItem>
-          <AniLink href={state.facebook} target="_blank" rel="noopener">
-            <NavLink dark>
-              <FacebookOutlined />
-            </NavLink>
-          </AniLink>
-        </NavItem>           
-        <NavItem>
           <AniLink href={state.instagram} target="_blank" rel="noopener">
             <NavLink dark>
-              <InstagramOutlined style={{ margin: "0 1rem" }} />
+              <InstagramFilled />
             </NavLink>
           </AniLink>
         </NavItem>           
         <NavItem>
-          <AniLink href={state.twitter} target="_blank" rel="noopener">
+          <AniLink title="Enviar WhatsApp" rel="noopener" target="_blank" href={`https://api.whatsapp.com/send?phone=${state.movil.replace(/\s/g,'')}&text=Hola,%20estoy%20visitando%20su%20sitio%20Web%20y%20quisiera%20comunicarme%20con%20uestedes.`}>
             <NavLink dark>
-              <TwitterOutlined />
+              <WhatsAppOutlined style={{ margin: "0 1rem" }} />
+            </NavLink>
+          </AniLink>
+        </NavItem>           
+        <NavItem>
+          <AniLink title="Enviar un email" href={`mailto:${state.email}`}>
+            <NavLink dark>
+              <MailOutlined />
             </NavLink>
           </AniLink>
         </NavItem>                           
