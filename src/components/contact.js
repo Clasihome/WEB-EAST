@@ -31,7 +31,7 @@ export default ()=> {
             </Title>
           </Col>
           <Col xs={12} md={3}>
-            <AniLink paintDrip hex={state.primaryColor} to="/contact" duration={.5}>
+            <AniLink paintDrip hex={state.primaryColor} to="/contacto" duration={.5}>
               <Button
                 primary
                 block

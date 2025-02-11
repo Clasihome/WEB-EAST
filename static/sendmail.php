@@ -26,28 +26,28 @@
         $nameAgent = isset( $_POST['nameAgent']) && $_POST['nameAgent'] != "null" ? $_POST['nameAgent'] : '-';
                 
         $mensajeCompleto = 
-        "Recibiste una consulta desde liderarpropiedades<br>
+        "Recibiste una consulta desde East Properties <br>
         <br>
         <b><u>Agente:</u> </b>".$nameAgent."<br/>
-        <b><u>Asunto:</u> </b>Recibiste una consulta desde propiedadesmyc.cl<br/>
+        <b><u>Asunto:</u> </b>Recibiste una consulta desde eastproperties.cl<br/>
         <b><u>Cliente:</u> </b>".$name."<br/>
         <b><u>Email:</u> </b><a href='mailto:".$email."'>".$email."</a><br/>
         <b><u>Celular:</u> </b>".$mobile."<br/><br/>
         <b><u>Mensaje:</u> </b>".$message."<br/><br/>
 
-        <a href='http://propiedadesmyc.cl/'>www.propiedadesmyc.cl.cl</a>
+        <a href='http://eastproperties.cl/'>www.eastproperties.cl</a>
         ";
         
         $mail->isSMTP();                     
-        $mail->Host = 'c2120007.ferozo.com';  
+        $mail->Host = 'mail.eastproperties.cl';  
         $mail->SMTPAuth = true;                
-        $mail->Username = 'contacto@propiedadesmyc.cl';
-        $mail->Password = 'MCCprop2021';                
+        $mail->Username = 'hola@eastproperties.cl';
+        $mail->Password = 'OhlqC.QQp1=}';                
         $mail->SMTPSecure = 'ssl';                            
         $mail->Port = 465;          
         
-        $mail->SetFrom( $email , 'Un cliente quiere contactar con propiedadesmyc.cl' );
-        $mail->addAddress( "contacto@propiedadesmyc.cl", 'Mensaje desde la web');   
+        $mail->SetFrom( $email , 'Un cliente quiere contactar con East Properties' );
+        $mail->addAddress( "hola@eastproperties.cl", 'Mensaje desde la web');   
         $mail->isHTML(true);                                 
         $mail->Subject = $subject;
         $body = "$mensajeCompleto";

@@ -6,7 +6,7 @@ export default (data) => {
       officeId: data.user ? data.user : data.office,
       primaryColor: data.primaryColor ? data.primaryColor : "#f2d40d",
       address: data.address ? data.address : "Lo Barnechea",
-      email: data.email ? data.email : "hola@eastproperties.es",
+      email: data.email ? data.email : "hola@eastproperties.cl",
       facebook: data.facebook ? data.facebook : "https://facebook.com",
       twitter: data.twitter ? data.twitter : "https://twitter.com",
       instagram: data.instagram ? data.instagram : "https://www.instagram.com/eastproperties/",

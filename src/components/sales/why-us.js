@@ -82,7 +82,7 @@ export default () => {
     <SectionCustom>
       <Container>
         <Title>
-         REAL STATE
+         REAL ESTATE
         </Title>
         <br></br>
    

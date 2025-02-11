@@ -179,21 +179,21 @@ export default ()=> {
             <NavCont>
               <NavList>
                 <NavItem>
-                  <AniLink paintDrip hex={state.primaryColor} to="/properties" duration={.5}>
+                  <AniLink paintDrip hex={state.primaryColor} to="/propiedades" duration={.5}>
                     <NavLink first>
                       Propiedades
                     </NavLink>
                   </AniLink>            
                 </NavItem>
                 <NavItem>
-                  <AniLink paintDrip hex={state.primaryColor} to="/about" duration={.5}>
+                  <AniLink paintDrip hex={state.primaryColor} to="/nosotros" duration={.5}>
                     <NavLink>
                       Nosotros
                     </NavLink>
                   </AniLink>            
                 </NavItem>                  
                 <NavItem>
-                  <AniLink paintDrip hex={state.primaryColor} to="/contact" duration={.5}>
+                  <AniLink paintDrip hex={state.primaryColor} to="/contacto" duration={.5}>
                     <NavLink >
                       Contacto
                     </NavLink>

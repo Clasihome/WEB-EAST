@@ -5,7 +5,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 export default ({ children, to }) => {
   const state = useContext(context);
   return(
-    <AniLink paintDrip hex="#5E90F2" to={to} duration={.5}>
+    <AniLink paintDrip hex={state.primaryColor} to={to} duration={.5}>
       {children}
     </AniLink>
   )

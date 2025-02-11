@@ -16,7 +16,7 @@ export default (values)=> {
   }
 
   const getUrl = ()=> {
-    const fixedParams = `/properties/?status=PUBLICADA,ARRENDADA,VENDIDA&limit=12&typeId=${typeId}&id=${officeId}`;
+    const fixedParams = `/propiedades/?status=PUBLICADA,ARRENDADA,VENDIDA&email=gracia@eastproperties.cl&limit=12&typeId=${typeId}`;
     if(params.stringSearch !== ''){
       return fixedParams + `searchString=${params.searchString}`;
     }

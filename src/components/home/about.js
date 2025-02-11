@@ -60,7 +60,7 @@ export default ()=> {
             <SubTitle>
               {state.home.about.banner.subTitle}
             </SubTitle>
-            <AniLink paintDrip hex={state.primaryColor} to="/about" duration={.5}>
+            <AniLink paintDrip hex={state.primaryColor} to="/nosotros" duration={.5}>
               <Button block>
                 {state.home.about.banner.buttonText}
               </Button>

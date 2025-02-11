@@ -143,17 +143,18 @@ export default ({ children, location }) => {
     `
   );
 
-  const getFeatured = async(email, id, typeId, maxProperties)=> {
-    try{
-      const data = await fetch(`https://wsnzm.clasihome.com:3443/api/conv/properties?email=gracia@eastproperties.cl&id=${id}&typeId=${typeId}&status=PUBLICADA&limit=${maxProperties}`);
+  const getFeatured = async (email, id, typeId, maxProperties) => {
+    try {
+      const data = await fetch(
+        `https://wsnzm.clasihome.com:3443/api/conv/properties?email=gracia@eastproperties.cl&id=${id}&typeId=${typeId}&status=PUBLICADA&limit=${maxProperties}`
+      );
       //const data = await fetch(`https://api.clasihome.com/rest/properties?id=${id}&typeId=${typeId}&status=PUBLICADA&limit=${maxProperties}`);
       const result = await data.json();
       return result;
-    }catch(e){
+    } catch (e) {
       console.log("ERROR PROPIEDADES DESTACADAS ", e);
-
     }
-  }
+  };
 
   const handleData = async () => {
     const preview = /builderId/.test(location.search);
@@ -220,30 +221,29 @@ export default ({ children, location }) => {
       <ThemeProvider theme={data.data}>
         <MainCont>
           <Helmet>
-            <meta charSet='utf-8' />
+            <meta charSet="utf-8" />
             <meta
-              name='description'
-              content='Conectamos clientes con propiedades. Optimiza, gestiona y vende más. La nueva plataforma inmobiliaria que te ayuda a optimizar tu tiempo de trabajo y obtener mejores resultados. Pruébalo gratis por 15 días.'
+              name="description"
+              content="Conectamos clientes con propiedades. Optimiza, gestiona y vende más. La nueva plataforma inmobiliaria que te ayuda a optimizar tu tiempo de trabajo y obtener mejores resultados. Pruébalo gratis por 15 días."
             />
             <meta
-              name='keywords'
-              content='clasihome, clasipro, clasihome propiedades chile, tecnología chile, software'
+              name="keywords"
+              content="East Properties Chile, Inmobiliaria en Chile, Compra y venta de propiedades, Arrendar propiedades en Chile, Plataforma inmobiliaria, Gestión de propiedades, Software inmobiliario, Optimización de ventas inmobiliarias, Propiedades en Santiago, Clasificación de inmuebles, Portal de propiedades, Tecnología para inmobiliarias, Conexión de clientes con propiedades, Gestión de ventas de inmuebles, Herramienta para corredores de propiedades, Propiedades en venta y arriendo, Prueba gratis plataforma inmobiliaria"
             />
             <title>EAST Properties - inmobiliaria</title>
-            <link rel='canonical' href='https://eastproperties.cl/' />
-            <meta property='og:url' content='https://eastproperties.cl/' />
-            <meta property='og:title' content='EAST Properties' />
+            <link rel="canonical" href="https://eastproperties.cl/" />
+            <meta property="og:url" content="https://eastproperties.cl/" />
+            <meta property="og:title" content="EAST Properties" />
             <meta
-              property='og:description'
-              content='Te ayudamos a conectar con la propiedad perfecta para tí.
-'
+              property="og:description"
+              content="Te ayudamos a conectar con la propiedad perfecta para ti."
             />
             <meta
-              property='og:image'
-              content='https://eastproperties.cl/static/logo-5f4e8b1970cba23e600220d0c431f0c2.png'
+              property="og:image"
+              content="https://eastproperties.cl/static/logo-5f4e8b1970cba23e600220d0c431f0c2.png"
             />
-            <meta name='og:type' content='website' />
-            <meta name='theme-color' content={data.data.primaryColor} />
+            <meta name="og:type" content="website" />
+            <meta name="theme-color" content={data.data.primaryColor} />
           </Helmet>
           <GlobalStyles />
           <MobileHeader />

@@ -207,7 +207,7 @@ export default ()=> {
           <Parrafo id="search">
           Corredora de Propiedades Boutique en Santiago Oriente 
           </Parrafo>
-          <Link to="about">
+          <Link to="nosotros">
             <Button id="formSearch" primary>Saber más</Button>
           </Link>
         </InfoCont>

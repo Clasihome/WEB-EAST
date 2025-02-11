@@ -131,7 +131,7 @@ export default ({ dark, light }) => {
                 </AniLink>
               </NavItem>
               <NavItem>
-                <AniLink paintDrip hex={state.primaryColor} to="/properties" duration={.5}>
+                <AniLink paintDrip hex={state.primaryColor} to="/propiedades" duration={.5}>
                   <NavLinkCustom dark={dark} light={!dark}>
                     Propiedades
                     <NavLinkLine />
@@ -139,9 +139,9 @@ export default ({ dark, light }) => {
                 </AniLink>
               </NavItem>
               <NavItem>
-                <AniLink paintDrip hex={state.primaryColor} to="/sales" duration={.5}>
+                <AniLink paintDrip hex={state.primaryColor} to="/realstate" duration={.5}>
                   <NavLinkCustom dark={dark} light={!dark}>
-                    Real State
+                    Real Estate
                     <NavLinkLine />
                   </NavLinkCustom>
                 </AniLink>
@@ -155,7 +155,7 @@ export default ({ dark, light }) => {
                 </AniLink>
               </NavItem>
               <NavItem>
-                <AniLink paintDrip hex={state.primaryColor} to="/about" duration={.5}>
+                <AniLink paintDrip hex={state.primaryColor} to="/nosotros" duration={.5}>
                   <NavLinkCustom dark={dark} light={!dark}>
                     Nosotros
                     <NavLinkLine />
